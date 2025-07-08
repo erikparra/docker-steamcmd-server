@@ -15,7 +15,7 @@ RUN  echo "deb http://deb.debian.org/debian trixie contrib non-free non-free-fir
 
 RUN dpkg --add-architecture i386 && \
 	apt-get update && \
-	apt -y install gnupg2 gcc-14 && \
+	apt -y install gnupg2 gcc-14 alsa-utils && \
 	mkdir -pm755 /etc/apt/keyrings && \
 	wget -O - https://dl.winehq.org/wine-builds/winehq.key | gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -  && \
 	wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/trixie/winehq-trixie.sources  && \
