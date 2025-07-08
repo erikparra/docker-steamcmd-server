@@ -170,4 +170,4 @@ fi
 
 echo "---Start Server---"
 cd ${SERVER_DIR}
-xvfb-run --auto-servernum --server-args='-screen 0 640x480x24:32' wine64 AstroServer.exe ${GAME_PARAMS}
+xvfb-run --auto-servernum --server-args='-screen 0 640x480x24:32' wine AstroServer.exe ${GAME_PARAMS}
