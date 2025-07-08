@@ -10,7 +10,7 @@ RUN dpkg --add-architecture i386 && \
 	echo " deb https://dl.winehq.org/wine-builds/debian/ trixie main" >> /etc/apt/sources.list.d/wine.list && \
 	apt-get update && \
 	apt -y install --no-install-recommends winehq-development && \
-    apt-get -y install lib32gcc-s1 screen xvfb winbind libnettle gmplib && \
+	apt-get -y install lib32gcc-s1 screen xvfb winbind libnettle gmplib && \
 	apt-get -y install gnutls-bin && \
 	apt-get -y --purge remove software-properties-common gnupg2 && \
 	apt-get -y autoremove && \
