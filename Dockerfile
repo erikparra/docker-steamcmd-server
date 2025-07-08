@@ -1,7 +1,7 @@
 FROM debian:trixie-slim
 
 LABEL org.opencontainers.image.authors="admin@minenet.at"
-LABEL org.opencontainers.image.source="https://github.com/erikparra/astroneer"
+LABEL org.opencontainers.image.source="https://github.com/erikparra/docker-steamcmd-server"
 
 RUN  echo "deb http://deb.debian.org/debian trixie contrib non-free non-free-firmware" >> /etc/apt/sources.list && \
 	apt-get update && apt-get -y upgrade && \
@@ -32,11 +32,9 @@ ENV DATA_DIR="/serverdata"
 ENV STEAMCMD_DIR="${DATA_DIR}/steamcmd"
 ENV SERVER_DIR="${DATA_DIR}/serverfiles"
 ENV GAME_ID="template"
-ENV UPDATE_PUBLIC_IP="false"
-ENV BACKUP="false"
-ENV BACKUP_INTERVAL=360
-ENV BACKUPS_TO_KEEP=8
-ENV GAME_PARAMS=""
+ENV GAME_NAME="template"
+ENV GAME_PARAMS="template"
+ENV GAME_PORT=27015
 ENV VALIDATE=""
 ENV UMASK=000
 ENV UID=99
